@@ -318,6 +318,8 @@ Check system status.
 
 ![1778927875734](image/Readme/1778927875734.png)
 
+![1778948124555](image/Readme/1778948124555.png)
+
 
 ---
 
