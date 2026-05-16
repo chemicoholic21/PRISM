@@ -338,7 +338,16 @@ Check system status.
 ![1778949131179](image/Readme/1778949131179.png)
 
 ![1778949203216](image/Readme/1778949203216.png)
+Bad PR
+![1778950656305](image/Readme/1778950656305.png)
 
+![1778950714045](image/Readme/1778950714045.png)
+
+![1778950745387](image/Readme/1778950745387.png)
+
+![1778950774529](image/Readme/1778950774529.png)
+
+![1778950815879](image/Readme/1778950815879.png)
 ---
 
 ## Why PRISM is Different
