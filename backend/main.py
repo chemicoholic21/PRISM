@@ -12,7 +12,7 @@ from urllib.parse import urlparse, urlencode
 from fastapi import FastAPI, HTTPException, Depends, Header, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 from dotenv import load_dotenv
 import httpx
 from github import Github, GithubException
@@ -93,6 +93,14 @@ class PRMergeRequest(BaseModel):
     merge_method: str = "merge"  # merge, squash, or rebase
     commit_title: Optional[str] = None
     commit_message: Optional[str] = None
+
+    @field_validator("merge_method")
+    @classmethod
+    def validate_merge_method(cls, v: str) -> str:
+        allowed = {"merge", "squash", "rebase"}
+        if v not in allowed:
+            raise ValueError(f"merge_method must be one of: {', '.join(allowed)}")
+        return v
 
 
 class GenerateCommentRequest(BaseModel):
